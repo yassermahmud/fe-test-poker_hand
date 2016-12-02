@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+  <div id = "table"></div>
+  <div id = "result" style = "margin: 10px; font: 20px arial"></div>
+
+  <script>
+
+    var cardSymbols = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+    var suitSymbols = ["&#x2663", "&#x2666", "&#x2665", "&#x2660"];
+    var options = ""; 
+    for(var i = 0; i < suitSymbols.length; i++) {
+      for(j = 0; j < cardSymbols.length; j++) {
+      options += '<option value ="' + (j + 1) + suitSymbols[i] + '">' + cardSymbols[j] + " " + suitSymbols[i] + '</option>' ;
+      }
+    }
+    var tableHTML = ''
+    for(var i = 0; i < 5; i++) {
+      tableHTML += '<select id = "card-number' + i + '" style = "font: 30px courier; margin: 10px; padding = 20px" onchange = "result()">'+ options + '</select>'
+    }
+
+    document.getElementById("table").innerHTML = tableHTML;
+    result();
+
+  </script>
+  <script type="text/javascript" src="solution.js"></script>
+
+</body>
+</html>
