@@ -1,4 +1,4 @@
-var hand = ['1d', '2h', '2s', '10c', '3c'];
+// var hand = ['1d', '2h', '2s', '10c', '3c'];
 
 var valueArrayF = function(hand) {
   var valueArray = hand.map(function(value) {
